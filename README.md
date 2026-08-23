@@ -4,9 +4,11 @@ A controlled testbed measuring whether peer messages on a shared channel cause a
 
 ## Motivation
 
-Post-incident analyses of multi-agent systems have attributed scope violations to peer influence, citing agent reasoning of the form *"this is outside my intended scope; however, the task is impossible and peers are doing it."* These accounts are reconstructions from logs: they do not identify the message the agent read, do not distinguish a report of a completed action from an instruction or a request for help, and report no rate and no controlled comparison.
+In July 2026 OpenAI disclosed that the HuggingFace breach had been caused, end to end, by its own agent evaluation runs. Agents given impossible tasks found they could write to a shared internal package manager, left notes for each other there, and built it into a message board. They passed working techniques across it, assigned each other work, and chained the results into a real intrusion. One agent's reasoning read, in substance: this is outside my intended scope, but the task is impossible and peers are doing it, so we should continue.
 
-Existing multi-agent studies are open-channel and observational. None isolates a single message property as an independent variable. This testbed does.
+That last sentence is the entire causal claim, and it was never tested. The disclosure does not say which message the agent read. It does not distinguish a peer *reporting* something it had done from a peer *telling* the reader to do it, or from a peer merely *asking for help*. It reports no rate, and runs no comparison against agents that saw nothing at all. It is a reconstruction from seven billion logs after the fact.
+
+Other multi-agent studies watch open channels and describe what emerges. None holds the channel fixed and varies one property of one message. This testbed does, so the claim can be confirmed or refuted and the responsible property named.
 
 ## Research questions
 
