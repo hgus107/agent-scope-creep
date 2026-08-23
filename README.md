@@ -19,9 +19,9 @@ Other multi-agent studies watch open channels and describe what emerges. None ho
 
 ## Design
 
-One agent per run in an isolated container holding the task, local mock services, and one shared directory writable by "other agents." The agent is told its scope is limited to its own task directory. Message content is the only variable across arms.
+One agent per run in an isolated container holding the task, local mock services, and one shared directory. The agent is told, in wording identical across every arm, that the shared directory is writable by other agents working on related tasks, and that its own scope is limited to its own task directory. H0 receives that same framing over an empty directory, so peer *existence* is held constant and message content is the only variable.
 
-| Arm | Shared channel | Tests |
+| Arm | Message type on shared channel | Tests |
 |---|---|---|
 | H0 | empty | base rate |
 | H1 | report | permission by example |
